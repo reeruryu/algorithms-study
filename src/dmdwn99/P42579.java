@@ -28,27 +28,24 @@ public class P42579 {
                 hashMap.put(genres[i], hashMap.getOrDefault(genres[i], 0) + plays[i]);
 
             List<String> keyList = new ArrayList<>(hashMap.keySet());
-            Collections.sort(keyList, (s2, s1) -> hashMap.get(s2) - hashMap.get(s1));
+            Collections.sort(keyList, (s1, s2) -> hashMap.get(s2) - hashMap.get(s1));
 
             int cnt = 0;
-            int index = 0;
-            int num = 1;
+
             List<Integer> tmp = new ArrayList<>();
 
-            while (index < 4 && cnt < keyList.size()) {
-                String genre = keyList.get(cnt);
-
+            for (String genre : keyList) {
                 for (Song song : list){
                     if (song.genre.equals(genre)) {
                         tmp.add(song.id);
-                        index++;
+                        cnt++;
                     }
-                    if (index > num || index == 4)
+                    if (cnt > 1)
                         break;
                 }
-                cnt++;
-                num = index+1;
+                cnt = 0;
             }
+
             answer = new int[tmp.size()];
             for (int i = 0;i<tmp.size();i++)
                 answer[i] = tmp.get(i);
