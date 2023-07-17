@@ -1,4 +1,4 @@
-package coze;
+package coze.sort;
 
 import java.util.Arrays;
 import java.util.Comparator;

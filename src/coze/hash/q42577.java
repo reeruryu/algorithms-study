@@ -1,4 +1,4 @@
-package coze;
+package coze.hash;
 
 import java.util.HashMap;
 import java.util.Map;

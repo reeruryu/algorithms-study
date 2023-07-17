@@ -1,4 +1,4 @@
-package coze;
+package coze.stack_queue;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
