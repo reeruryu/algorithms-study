@@ -1,4 +1,4 @@
-package dmdwn99;
+package dmdwn99.week1;
 import java.util.*;
 public class P42583 {
     public int solution(int bridge_length, int weight, int[] truck_weights) {

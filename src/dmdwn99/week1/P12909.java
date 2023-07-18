@@ -1,4 +1,4 @@
-package dmdwn99;
+package dmdwn99.week1;
 import java.util.*;
 public class P12909 {
     boolean solution(String s) {
