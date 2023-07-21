@@ -1,4 +1,4 @@
-package reeruryu;
+package reeruryu.week1;
 
 /*
 문제: 프로그래머스 - 주식가격 / 난이도: Level 2

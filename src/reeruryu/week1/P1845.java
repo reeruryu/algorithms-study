@@ -1,4 +1,4 @@
-package reeruryu;
+package reeruryu.week1;
 
 /*
 문제: 프로그래머스 - 폰켓몬 / 난이도: Level 1

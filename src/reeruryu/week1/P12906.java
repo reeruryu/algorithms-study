@@ -1,4 +1,4 @@
-package reeruryu;
+package reeruryu.week1;
 
 /*
 문제: 프로그래머스 - 같은 숫자는 싫어 / 난이도: Level 1

@@ -1,4 +1,4 @@
-package reeruryu;
+package reeruryu.week1;
 
 /*
 문제: 프로그래머스 - 이중우선순위큐 / 난이도: Level 3

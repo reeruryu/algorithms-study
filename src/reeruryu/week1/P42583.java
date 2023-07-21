@@ -1,4 +1,4 @@
-package reeruryu;
+package reeruryu.week1;
 
 /*
 문제: 프로그래머스 - 다리를 지나는 트럭 / 난이도: Level 2
