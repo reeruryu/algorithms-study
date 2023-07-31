@@ -1,4 +1,4 @@
-package dmdwn99;
+package dmdwn99.week1;
 
 public class P42587 {
     public int solution(int[] priorities, int location) {

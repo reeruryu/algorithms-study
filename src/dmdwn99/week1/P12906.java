@@ -1,4 +1,4 @@
-package dmdwn99;
+package dmdwn99.week1;
 import java.util.*;
 public class P12906 {
     public int[] solution(int []arr) {
