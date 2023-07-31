@@ -1,4 +1,4 @@
-package coze;
+package coze.stack_queue;
 
 public class q42584 {
     public int[] solution(int[] prices) {
