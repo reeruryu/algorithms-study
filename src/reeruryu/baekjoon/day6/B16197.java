@@ -6,8 +6,6 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class B16197 {
-    static boolean[][] visited1;
-    static boolean[][] visited2;
     static int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     static char[][] arr;
     static int[] coin1;
@@ -21,8 +19,6 @@ public class B16197 {
         N = Integer.parseInt(st.nextToken()); // 행
         M = Integer.parseInt(st.nextToken()); // 열
         arr = new char[N][M];
-        visited1 = new boolean[N][M];
-        visited2 = new boolean[N][M];
 
         int cnt = 0;
         coin1 = new int[2];
@@ -50,7 +46,7 @@ public class B16197 {
 
     public static void dfs(int x1, int y1, int x2, int y2, int cnt) {
 
-        if (cnt >= 10) return;
+        if (cnt > 10) return;
 
         if ((x1 < 0 || x1 >= N || y1 < 0 || y1 >= M) &&
                 (x2 < 0 || x2 >= N || y2 < 0 || y2 >= M)) {
@@ -70,15 +66,20 @@ public class B16197 {
             int newX2 = x2 + d[0];
             int newY2 = y2 + d[1];
 
-            if (arr[newX1][newY1] == '#' || arr[newX2][newY2] == '#') continue;
-
-            if (!visited1[newX1][newY1] && !visited2[newX2][newY2]) {
-                visited1[newX1][newY1] = true;
-                visited2[newX2][newY2] = true;
-                dfs(newX1, newY1, newX2, newY2, cnt + 1);
-                visited1[newX1][newY1] = false;
-                visited2[newX2][newY2] = false;
+            if ((newX1 >= 0 && newX1 < N && newY1 >= 0 && newY1 < M) &&
+                    arr[newX1][newY1] == '#') {
+                newX1 = x1;
+                newY1 = y1;
             }
+
+            if ((newX2 >= 0 && newX2 < N && newY2 >= 0 && newY2 < M) &&
+                    arr[newX2][newY2] == '#') {
+                newX2 = x2;
+                newY2 = y2;
+            }
+
+
+            dfs(newX1, newY1, newX2, newY2, cnt + 1);
 
         }
 
